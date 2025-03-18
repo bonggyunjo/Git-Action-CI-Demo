@@ -15,6 +15,8 @@ public class CiDemo {
         measureStringPerformance();
         measureStringBuilderPerformance();
     }
+    
+    // String
         private static void measureStringPerformance() {
         long startTime = System.nanoTime();
         String str = "";
@@ -25,7 +27,7 @@ public class CiDemo {
         System.out.println("String 연결 시간: " + (endTime - startTime) + " ns");
     }
 
-    // StringBuilder 사용 시간 측정
+    // StringBuilder
     private static void measureStringBuilderPerformance() {
         long startTime = System.nanoTime();
         StringBuilder sb = new StringBuilder();
