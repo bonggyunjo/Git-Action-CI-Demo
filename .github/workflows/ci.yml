@@ -1,0 +1,31 @@
+name: Java CI with GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v3  
+
+      - name: Java 설치
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  
+          java-version: '17'  
+
+      - name: 프로젝트 빌드
+        run: |
+          mvn clean package  # Maven 프로젝트 빌드 (Gradle이면 gradle build)
+
+      - name: 실행 시간 측정
+        run: |
+          java -cp target/*.jar com.example.PerformanceTest  # main 함수 실행 (패키지명 수정 필요)
