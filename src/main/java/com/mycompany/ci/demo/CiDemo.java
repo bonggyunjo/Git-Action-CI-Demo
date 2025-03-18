@@ -1,3 +1,5 @@
+package com.mycompany.ci.demo;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.InputStreamReader;
