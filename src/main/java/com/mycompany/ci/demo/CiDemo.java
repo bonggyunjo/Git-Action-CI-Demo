@@ -11,7 +11,7 @@ import java.util.Map;
 public class CiDemo {
 
     private static final String API_KEY = "YOUR_TMDB_API_KEY";  // 여기에 TMDB API Key를 넣으세요.
-    private static final String API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=" + API_KEY;
+    private static final String API_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + API_KEY;
 
     // 캐시 저장소 (메모리 캐싱)
     private static Map<String, String> cache = new HashMap<>();
